@@ -1,14 +1,15 @@
-import { AuthProvider } from '../lib/auth'
-import '../styles/globals.css'
+import { ThemeProvider } from '@emotion/react';
+import { AuthProvider } from '../lib/auth';
+import '../styles/globals.css';
+import theme from '../styles/theme';
 
-
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-<AuthProvider>
-<Component {...pageProps} />
-</AuthProvider>
-    
-
-)
-}
-export default MyApp
+    <ThemeProvider theme={theme}>
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
+    </ThemeProvider>
+  );
+};
+export default App;
