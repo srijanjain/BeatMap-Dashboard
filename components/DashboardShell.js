@@ -12,16 +12,15 @@ import {
   Heading,
   Box,
   Text,
-  Button,
-  useRadio
+  Button
 } from '@chakra-ui/react';
 import { useAuth } from '@/lib/auth';
 // import { AddIcon } from '@chakra-ui/icons'
 
 const DashboardShell = ({ children }) => {
   //   <ChakraProvider resetCSS>
-  const auth=useAuth();
-  <Flex flexDirection="column">
+  const auth= useAuth();
+  return <Flex flexDirection="column">
     <Flex
       backgroundColor="#191414"
       justifyContent="space-between"
@@ -38,7 +37,7 @@ const DashboardShell = ({ children }) => {
         <Link mr={4} color="white">
           Account
         </Link>
-        <Avatar size="sm" src={auth.user.photoURL}/> //src
+        <Avatar size="sm" src={auth.user.photoUrl}/> //src
       </Flex>
     </Flex>
     <Flex backgroundColor="#1DB954" p={8} height="100vh">
