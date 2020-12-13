@@ -1,15 +1,5 @@
-import {
-    Button,
-    Code,
-    Heading,
-    Text,
-    Image,
-    Icon,
-    Box,
-    Flex
-  } from '@chakra-ui/react';
-  import { useAuth } from '@/lib/auth';
-  import HowItWorks from '@/components/HowItWorks';
+import HowItWorks from '@/components/HowItWorks';
+import { useAuth } from '@/lib/auth';
   
   const Dashboard =()=> {
     const auth = useAuth();
@@ -19,6 +9,5 @@ import {
     }
     return <HowItWorks />;
   }
-
   
   export default Dashboard

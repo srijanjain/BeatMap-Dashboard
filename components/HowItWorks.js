@@ -19,24 +19,34 @@ import DashboardShell from './DashboardShell'
 
 const HowItWorks = () => (
     <DashboardShell>
+              <Breadcrumb>
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink color="bgray.700" fontSize="sm">
+                How it works
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+              <Heading color="White" mb={4}>
+            How it works
+          </Heading>
             <Box backgroundColor="white" mb={4} borderRadius="8px" p={8}>
-              <Heading size="md" pb={4} fontSize="lg">
+              <Heading size="lg" pb={4} fontWeight="bold">
                 Discover & create music wherever you go:
               </Heading>
               <Text pt={2} pb={2} fontSize="md" textAlign="justify">
-                1. Login 👥 and head over to get started page
+                1. Login 👥 and head over to get started page.
               </Text>
               <Text pt={2} pb={2}>
                 2. Give permission for your location 🛰️ and camera 📷
               </Text>
               <Text pt={2} pb={2}>
                 3. Tap on any available BeatMap📍in mixed reality or use the
-                discover button to find nearby BeatMaps
+                discover button to find nearby BeatMaps.
               </Text>
               <Text pt={2} pb={2}>
                 4. Listen to existing music 🎶 or create your own dope beats 💫
               </Text>
-              <Button variant="solid" size="md">
+              <Button variant="solid"  size="md">
                 Get Started
               </Button>
             </Box>
