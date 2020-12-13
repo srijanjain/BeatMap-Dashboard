@@ -1,13 +1,13 @@
-import HowItWorks from '@/components/HowItWorks';
+import Contribute from '@/components/Contribute';
 import { useAuth } from '@/lib/auth';
   
-  const Dashboard =()=> {
+  const contribute =()=> {
     const auth = useAuth();
 
     if (!auth.user){
         return 'Loading...'
     }
-    return <HowItWorks />;
+    return <Contribute />;
   }
   
-  export default Dashboard
+  export default contribute

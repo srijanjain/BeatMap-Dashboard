@@ -15,53 +15,71 @@ import {
   Button
 } from '@chakra-ui/react';
 import { useAuth } from '@/lib/auth';
+import { useRouter } from 'next/router';
 // import { AddIcon } from '@chakra-ui/icons'
 
 const DashboardShell = ({ children }) => {
   //   <ChakraProvider resetCSS>
-  const auth= useAuth();
-  return <Flex flexDirection="column">
-    <Flex
-      backgroundColor="#191414"
-      justifyContent="space-between"
-      alignItems="center"
-      py={4}
-      px={8}
-    >
-      <Stack spacing={4} isInline align="center">
-        <Icon name="logo" size="24px"/> //to do
-        <Link color="white">How it works</Link>
-        <Link color="white">Contribute</Link>
-      </Stack>
-      <Flex>
-        <Link mr={4} color="white">
-          Account
-        </Link>
-        <Avatar size="sm" src={auth.user.photoUrl}/> //src
-      </Flex>
-    </Flex>
-    <Flex backgroundColor="#1DB954" p={8} height="100vh">
+  const auth = useAuth();
+  const router = useRouter();
+  return (
+    <Flex flexDirection="column">
       <Flex
-        //   justifyContent="center"
-        maxWidth="800px"
-        // alignItems="center"
-        w="100%"
-        ml="auto"
-        mr="auto"
-        direction="column"
+        backgroundColor="#191414"
+        justifyContent="space-between"
+        alignItems="center"
+        py={4}
+        px={8}
       >
-        <Breadcrumb>
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink color="black">How it works</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-        <Heading color="White" mb={4}>
-          How it works
-        </Heading>
-        {children}
+        <Stack spacing={4} isInline align="center">
+          <Icon name="logo" size="24px" /> //to do
+          <Link
+            color="white"
+            onClick={() => {
+              router.push('/dashboard');
+            }}
+          >
+            How it works
+          </Link>
+          <Link
+            color="white"
+            onClick={() => {
+              router.push('/contribute');
+            }}
+          >
+            Contribute
+          </Link>
+        </Stack>
+        <Flex>
+          <Link mr={4} color="white">
+            Account
+          </Link>
+          <Avatar size="sm" src={auth.user.photoUrl} /> //src
+        </Flex>
+      </Flex>
+      <Flex backgroundColor="#1DB954" p={8} height="100vh">
+        <Flex
+          //   justifyContent="center"
+          maxWidth="800px"
+          // alignItems="center"
+          w="100%"
+          ml="auto"
+          mr="auto"
+          direction="column"
+        >
+          <Breadcrumb>
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink color="bgray.700" fontSize="sm">
+                How it works
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+
+          {children}
+        </Flex>
       </Flex>
     </Flex>
-  </Flex>
+  );
   //   </ChakraProvider>
 };
 
