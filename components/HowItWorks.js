@@ -48,7 +48,7 @@ const HowItWorks = () => (
                 4. Listen to existing music 🎶 or create your own dope beats 💫
               </Text>
         
-              <Image  mb={4} src="/static/instructions.png" alt="BeatMap logo" />
+              <Image  mb={4} src="/static/instructions.png" alt="Instructions" />
               <Box alignContent="center">
               <Button variant="solid" colorScheme="green" size="lg" as="a" href="https://srijanja.in/beatmap" isFullWidth={true} >
                 Get Started
