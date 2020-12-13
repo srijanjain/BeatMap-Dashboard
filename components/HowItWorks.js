@@ -46,7 +46,7 @@ const HowItWorks = () => (
               <Text pt={2} pb={2}>
                 4. Listen to existing music 🎶 or create your own dope beats 💫
               </Text>
-              <Button variant="solid"  size="md">
+              <Button variant="solid"  size="md" as="a" href="https://srijanja.in/BeatMap">
                 Get Started
               </Button>
             </Box>
