@@ -1,39 +1,45 @@
-import Head from 'next/head'
-import { useAuth } from '../lib/auth'
-import styles from '../styles/Home.module.css'
+import {
+  Button,
+  Code,
+  Heading,
+  Text,
+  Image,
+  Icon,
+  Box,
+  Flex
+} from '@chakra-ui/react';
+import { useAuth } from '@/lib/auth';
 
-export default function Home() {
-  const auth=useAuth();
+const Home =()=> {
+  const auth = useAuth();
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Flex
+    as="main"
+    direction="column"
+    align="center"
+    justify="center"
+    h="100vh"
+    // maxW="300px"
+  >
+      <head>
+        <title>BeatMap</title>
+      </head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          BeatMap
-        </h1> 
+        <Image boxSize="100px" src="BeatMap.png" alt="BeatMap logo" />
+        <Heading> BeatMap</Heading>
+        {/* <Icon color="black" name="logo" size="100px"></Icon> */}
+        <Text>
+          Current user: <Code>{auth.user ? auth.user.email : 'None'}</Code>
+        </Text>
+        {auth.user ? ( 
 
-        <p className={styles.description}>
-          Move. Create. Discover.
-        </p>
-        <button onClick={(e)=> auth.signinWithGitHub()}>Sign In</button>
-        <div>{auth?.user?.email}</div>
-        {auth?.user && (<button onClick={(e)=> auth.signout()}>Sign Out</button>)}
-      </main>
+        <Button mt={4} size="sm" onClick={(e) => auth.signout()}>Sign Out</Button>
+        ) : (
+          <Button mt={4} size="sm" onClick={(e) => auth.signinWithGitHub()}>Sign In</Button>
+        )}
+      </Flex>
 
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer> */}
-    </div>
-  )
+  );
 }
+ export default Home
