@@ -1,5 +1,7 @@
+// import Contribute from '@/components/Contribute';
 import Contribute from '@/components/Contribute';
 import { useAuth } from '@/lib/auth';
+import React from 'react';
   
   const contribute =()=> {
     const auth = useAuth();

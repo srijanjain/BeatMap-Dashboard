@@ -19,6 +19,13 @@ import DashboardShell from './DashboardShell'
 
 const HowItWorks = () => (
     <DashboardShell>
+              <Breadcrumb>
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink color="bgray.700" fontSize="sm">
+                How it works
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
               <Heading color="White" mb={4}>
             How it works
           </Heading>

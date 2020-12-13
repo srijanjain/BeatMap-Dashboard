@@ -67,13 +67,7 @@ const DashboardShell = ({ children }) => {
           mr="auto"
           direction="column"
         >
-          <Breadcrumb>
-            <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink color="bgray.700" fontSize="sm">
-                How it works
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-          </Breadcrumb>
+
 
           {children}
         </Flex>

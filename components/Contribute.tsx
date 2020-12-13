@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaGithub } from 'react-icons/fa';
 import {
   ChakraProvider,
   Flex,
@@ -19,6 +20,13 @@ import DashboardShell from './DashboardShell'
 
 const Contribute = () => (
     <DashboardShell>
+                <Breadcrumb>
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink color="bgray.700" fontSize="sm">
+                Contribute
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
     <Heading color="White" mb={4}>
             Contribute
           </Heading>
@@ -34,8 +42,8 @@ const Contribute = () => (
             <Text>
             Check us out BeatMap on GitHub:
             </Text>
-            
-              <Button variant="solid" size="md" onClick="github.com"> 
+            {/* //check formatting later */}
+              <Button as="a" leftIcon={<FaGithub />} href="https://www.github.com" > 
                 GitHub
               </Button>
             </Box>
