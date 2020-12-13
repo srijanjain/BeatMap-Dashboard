@@ -44,7 +44,7 @@ const DashboardShell = ({ children }) => {
       <Flex
         //   justifyContent="center"
         maxWidth="800px"
-        alignItems="center"
+        // alignItems="center"
         w="100%"
         ml="auto"
         mr="auto"
