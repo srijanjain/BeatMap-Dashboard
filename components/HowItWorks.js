@@ -12,6 +12,7 @@ import {
   Heading,
   Box,
   Text,
+  Image,
   Button
 } from '@chakra-ui/react'
 // import { AddIcon } from '@chakra-ui/icons'
@@ -21,7 +22,7 @@ const HowItWorks = () => (
     <DashboardShell>
               <Breadcrumb>
             <BreadcrumbItem isCurrentPage>
-              <BreadcrumbLink color="bgray.700" fontSize="sm">
+              <BreadcrumbLink color="bgray.700" fontSize="sm" align="center">
                 How it works
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -46,9 +47,13 @@ const HowItWorks = () => (
               <Text pt={2} pb={2}>
                 4. Listen to existing music 🎶 or create your own dope beats 💫
               </Text>
-              <Button variant="solid"  size="md" as="a" href="https://srijanja.in/BeatMap">
+        
+              <Image  mb={4} src="/static/instructions.png" alt="BeatMap logo" />
+              <Box alignContent="center">
+              <Button variant="solid" colorScheme="green" size="lg" as="a" href="https://srijanja.in/beatmap" isFullWidth={true} >
                 Get Started
               </Button>
+              </Box>
             </Box>
     </DashboardShell>
 )
