@@ -1,21 +1,7 @@
-import React from 'react';
-import {
-  ChakraProvider,
-  Flex,
-  Link,
-  Stack,
-  Icon,
-  Avatar,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  Heading,
-  Box,
-  Text,
-  Button
-} from '@chakra-ui/react';
 import { useAuth } from '@/lib/auth';
+import { Avatar, Flex, Image, Link, Stack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
+import React from 'react';
 // import { AddIcon } from '@chakra-ui/icons'
 
 const DashboardShell = ({ children }) => {
@@ -32,7 +18,15 @@ const DashboardShell = ({ children }) => {
         px={8}
       >
         <Stack spacing={4} isInline align="center">
-          <Icon name="logo" size="24px" /> //to do
+          <Image width="50px" src="/static/beatmap_w.png" alt="BeatMap logo" />
+          <Link
+            color="white"
+            onClick={() => {
+              router.push('/');
+            }}
+          >
+            About
+          </Link>
           <Link
             color="white"
             onClick={() => {
@@ -57,7 +51,7 @@ const DashboardShell = ({ children }) => {
           <Avatar size="sm" src={auth.user.photoUrl} /> //src
         </Flex>
       </Flex>
-      <Flex backgroundColor="#1DB954" p={8} height="100vh">
+      <Flex backgroundColor="#1DB954" p={8} height="100%">
         <Flex
           //   justifyContent="center"
           maxWidth="800px"
@@ -67,8 +61,6 @@ const DashboardShell = ({ children }) => {
           mr="auto"
           direction="column"
         >
-
-
           {children}
         </Flex>
       </Flex>

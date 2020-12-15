@@ -7,6 +7,7 @@ import {
   Stack,
   Icon,
   Avatar,
+  Image,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
@@ -43,6 +44,7 @@ const Contribute = () => (
         We're currently in beta phase and are looking for cool developers,
         designers and musicians to help us take BeatMap forward.
       </Text>
+      <Image width="500px" align="center" src="/static/techstack.png" alt="BeatMap techstack" />
       <Text pt={2} pb={2} fontSize="md" textAlign="justify">
         If you think you're up for a challenge to build an application
         which uses Mixed Reality and Machine Learning
@@ -50,7 +52,7 @@ const Contribute = () => (
       </Text>
       <Text>Check us out on GitHub:</Text>
       {/* //check formatting later */}
-      <Button as="a" leftIcon={<FaGithub />} href="https://www.github.com">
+      <Button as="a" leftIcon={<FaGithub />} href="https://github.com/srijanjain/BeatMap-Dashboard">
         GitHub
       </Button>
     </Box>
