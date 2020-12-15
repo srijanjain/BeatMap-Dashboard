@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+This is our front end repository, check out our main repository here: [https://github.com/srijanjain/beatmap](https://github.com/srijanjain/beatmap)
+
 First, run the development server:
 
 ```bash
