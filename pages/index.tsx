@@ -98,7 +98,7 @@ const Index = () => {
                       size="md"
                       color="black"
                       as="a"
-                      href="/beatmap_whitepaper.pdf"
+                      href="https://drive.google.com/file/d/1guP7KzjojV6Bqi4blgW9pNuCVZEYcsRx/view?usp=sharing"
                     >
                       Whitepaper
                     </Button>
