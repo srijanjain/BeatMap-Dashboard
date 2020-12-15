@@ -39,7 +39,7 @@ const Index = () => {
           <Link
             color="white"
             onClick={() => {
-              router.push('/dashboard');
+              router.push('/app');
             }}
           >
             How it works
@@ -47,7 +47,7 @@ const Index = () => {
           <Link
             color="white"
             onClick={() => {
-              router.push('/contribute');
+              router.push('/app');
             }}
           >
             Contribute
